@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document Details | Karnataka AI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="document.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-landmark"></i>
+            </div>
+
+            <div class="brand-name">
+                <h2>ಕರ್ನಾಟಕ AI</h2>
+                <span>KARNATAKA INFORMATION PORTAL</span>
+            </div>
+
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#categories">Explore</a>
+            <a href="index.html#notifications">Notifications</a>
+            <a href="assistant.html">AI Assistant</a>
+        </nav>
+
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to home
+        </a>
+
+    </header>
+
+
+    <main class="document-page">
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="index.html#notifications">Notifications</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Document details</span>
+        </div>
+
+
+        <!-- DOCUMENT HEADER -->
+
+        <section class="document-header">
+
+            <div class="document-title-area">
+
+                <div class="document-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <div>
+
+                    <div class="document-category" id="documentCategory">
+                        Loading category...
+                    </div>
+
+                    <h1 id="documentTitle">
+                        Loading document...
+                    </h1>
+
+                    <p id="documentDescription">
+                        Please wait while document information loads.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="document-actions">
+
+                <button class="action-btn"
+                        id="copyLinkBtn">
+                    <i class="fa-solid fa-link"></i>
+                    Copy link
+                </button>
+
+                <button class="action-btn primary-action"
+                        id="printBtn">
+                    <i class="fa-solid fa-print"></i>
+                    Print
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOCUMENT METADATA -->
+
+        <section class="metadata-grid">
+
+            <div class="metadata-card">
+
+                <i class="fa-solid fa-building-columns"></i>
+
+                <div>
+                    <span>Issuing department</span>
+                    <strong id="documentDepartment">Not available</strong>
+                </div>
+
+            </div>
+
+            <div class="metadata-card">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <div>
+                    <span>Publication date</span>
+                    <strong id="documentDate">Not available</strong>
+                </div>
+
+            </div>
+
+            <div class="metadata-card">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <div>
+                    <span>Academic / reference year</span>
+                    <strong id="documentYear">Not available</strong>
+                </div>
+
+            </div>
+
+            <div class="metadata-card">
+
+                <i class="fa-solid fa-tag"></i>
+
+                <div>
+                    <span>Category</span>
+                    <strong id="documentType">Not available</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN DOCUMENT CONTENT -->
+
+        <div class="document-layout">
+
+            <div class="document-main-content">
+
+                <!-- AI SUMMARY -->
+
+                <section class="content-panel ai-summary-panel">
+
+                    <div class="panel-heading">
+
+                        <div class="panel-icon ai-icon">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+
+                        <div>
+                            <span class="ai-label">AI-POWERED EXPLANATION</span>
+                            <h2>Understand this notification</h2>
+                        </div>
+
+                    </div>
+
+                    <div class="ai-notice">
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        This is a simplified explanation, not an
+                        official government statement. Always refer
+                        to the original document for authoritative details.
+                    </div>
+
+                    <div id="aiSummary" class="summary-content">
+                        <p>Loading summary...</p>
+                    </div>
+
+                    <div class="summary-footer">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>AI-generated content should be checked against the original source.</span>
+                    </div>
+
+                </section>
+
+
+                <!-- ELIGIBILITY -->
+
+                <section class="content-panel">
+
+                    <div class="panel-heading">
+
+                        <div class="panel-icon eligibility-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <div>
+                            <span class="section-label">IMPORTANT INFORMATION</span>
+                            <h2>Eligibility criteria</h2>
+                        </div>
+
+                    </div>
+
+                    <div id="eligibilityContent" class="detail-content">
+                        Loading eligibility information...
+                    </div>
+
+                </section>
+
+
+                <!-- IMPORTANT DATES -->
+
+                <section class="content-panel">
+
+                    <div class="panel-heading">
+
+                        <div class="panel-icon dates-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+
+                        <div>
+                            <span class="section-label">DEADLINES AND SCHEDULE</span>
+                            <h2>Important dates</h2>
+                        </div>
+
+                    </div>
+
+                    <div id="datesContent" class="detail-content">
+                        Loading dates...
+                    </div>
+
+                </section>
+
+
+                <!-- ORIGINAL DOCUMENT -->
+
+                <section class="content-panel">
+
+                    <div class="panel-heading">
+
+                        <div class="panel-icon pdf-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <div>
+                            <span class="section-label">PRIMARY SOURCE</span>
+                            <h2>Original government document</h2>
+                        </div>
+
+                    </div>
+
+                    <div class="source-verification" id="sourceVerification">
+
+    <!-- VERIFICATION STATUS -->
+
+    <div class="verification-status" id="verificationStatus">
+
+        <div class="verification-icon">
+            <i class="fa-solid fa-circle-question"></i>
+        </div>
+
+        <div>
+            <strong id="verificationTitle">
+                Verification unavailable
+            </strong>
+
+            <p id="verificationDescription">
+                This document has not yet been connected to a verified
+                official government source.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- SOURCE DETAILS -->
+
+    <h3 class="verification-subheading">
+        Document source details
+    </h3>
+
+    <div class="source-details">
+        <span>Issuing department</span>
+        <strong id="sourceDepartment">Not available</strong>
+    </div>
+
+    <div class="source-details">
+        <span>Official document reference</span>
+        <strong id="sourceReference">Not provided</strong>
+    </div>
+
+    <div class="source-details">
+        <span>Publication date</span>
+        <strong id="sourceDate">Not available</strong>
+    </div>
+
+    <div class="source-details">
+        <span>Official website</span>
+        <strong id="sourceDomain">Not connected</strong>
+    </div>
+
+
+    <!-- VERIFICATION CHECKLIST -->
+
+    <h3 class="verification-subheading">
+        Verification checklist
+    </h3>
+
+    <div class="verification-checklist">
+
+        <div class="verification-check">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Official source domain checked</span>
+        </div>
+
+        <div class="verification-check">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Original document accessible</span>
+        </div>
+
+        <div class="verification-check">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Document reference confirmed</span>
+        </div>
+
+        <div class="verification-check">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Publication date confirmed</span>
+        </div>
+
+    </div>
+
+
+    <!-- SOURCE STATUS -->
+
+    <div id="sourceStatus" class="source-status">
+        No official source has been connected yet.
+    </div>
+
+
+    <!-- SOURCE BUTTONS -->
+
+    <div class="source-buttons">
+
+        <a href="#"
+           id="originalSourceBtn"
+           class="source-button"
+           target="_blank"
+           rel="noopener noreferrer"
+           hidden>
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Open original source
+
+        </a>
+
+        <a href="#"
+           id="pdfDownloadBtn"
+           class="source-button pdf-button"
+           target="_blank"
+           rel="noopener noreferrer"
+           hidden>
+
+            <i class="fa-solid fa-file-pdf"></i>
+            Open PDF
+
+        </a>
+
+    </div>
+
+
+    <div class="verification-note">
+        AI-generated explanations are not official government
+        statements. Always check the original document before
+        making important decisions.
+    </div>
+
+</div>
+
+                    <div class="pdf-preview" id="pdfPreview">
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                        <h3>PDF preview</h3>
+
+                        <p>
+                            The original document preview will appear
+                            here when a verified PDF is available.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="document-sidebar">
+
+                <div class="sidebar-card">
+
+                    <h3>Document overview</h3>
+
+                    <div class="sidebar-item">
+                        <span>Category</span>
+                        <strong id="sidebarCategory">-</strong>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <span>Department</span>
+                        <strong id="sidebarDepartment">-</strong>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <span>Published</span>
+                        <strong id="sidebarDate">-</strong>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <span>Reference year</span>
+                        <strong id="sidebarYear">-</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="sidebar-card trust-card">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <h3>Information transparency</h3>
+
+                    <p>
+                        Our platform separates original government
+                        information from AI-generated explanations.
+                    </p>
+
+                    <p>
+                        Verify important decisions using the original
+                        issuing department's publication.
+                    </p>
+
+                </div>
+
+
+                <a href="assistant.html"
+                   class="ask-ai-card">
+
+                    <i class="fa-solid fa-sparkles"></i>
+
+                    <h3>Have more questions?</h3>
+
+                    <p>Ask our AI assistant to explain government information.</p>
+
+                    <span>Ask a question
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+            <p>© 2026 Karnataka AI. Academic project prototype.</p>
+            <p>Always verify information from original government sources.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="document.js"></script>
+
+</body>
+</html>

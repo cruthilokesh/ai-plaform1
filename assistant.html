@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karnataka AI | Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assistant.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="assistant-page">
+
+    <!-- NAVIGATION -->
+    <header class="assistant-header">
+
+        <a href="index.html" class="assistant-brand">
+            <div class="brand-icon">
+                <i class="fas fa-landmark"></i>
+            </div>
+
+            <div>
+                <h2>Karnataka AI</h2>
+                <span>Government Information Assistant</span>
+            </div>
+        </a>
+
+        <div class="header-actions">
+
+            <select id="languageSelect" class="language-select">
+                <option value="en">English</option>
+                <option value="kn">ಕನ್ನಡ</option>
+            </select>
+
+            <a href="index.html" class="back-home">
+                <i class="fas fa-house"></i>
+                Home
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CHAT LAYOUT -->
+    <main class="assistant-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="chat-sidebar" id="chatSidebar">
+
+            <button class="new-chat-btn" id="newChatBtn">
+                <i class="fas fa-plus"></i>
+                New Chat
+            </button>
+
+            <div class="history-heading">
+                <span>RECENT CONVERSATIONS</span>
+            </div>
+
+            <div id="chatHistory" class="chat-history">
+
+                <p class="history-empty">
+                    Your conversations will appear here.
+                </p>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-info">
+                    <i class="fas fa-shield-halved"></i>
+
+                    <div>
+                        <strong>Information Transparency</strong>
+                        <p>Always verify important details with the original government notice.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CHAT AREA -->
+        <section class="chat-main">
+
+            <!-- CHAT TOP BAR -->
+            <div class="chat-topbar">
+
+                <button class="mobile-sidebar-btn" id="mobileSidebarBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="assistant-status">
+
+                    <div class="assistant-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+
+                    <div>
+                        <h3>Karnataka AI Assistant</h3>
+
+                        <span>
+                            <span class="status-dot"></span>
+                            Demo mode
+                        </span>
+                    </div>
+
+                </div>
+
+                <button class="clear-chat-btn" id="clearChatBtn">
+                    <i class="fas fa-trash"></i>
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- MESSAGES -->
+            <div class="chat-messages" id="chatMessages">
+
+                <div class="welcome-screen" id="welcomeScreen">
+
+                    <div class="welcome-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <h1>How can I help you today?</h1>
+
+                    <p>
+                        Explore Karnataka government notifications,
+                        scholarships, recruitment opportunities and
+                        public welfare schemes using simple questions.
+                    </p>
+
+                    <div class="suggestion-grid">
+
+                        <button class="suggestion-card"
+                                data-question="What scholarships are available for students?">
+
+                            <i class="fas fa-graduation-cap"></i>
+
+                            <span>Student Scholarships</span>
+
+                            <small>Explore education opportunities</small>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="How can I find Karnataka government job notifications?">
+
+                            <i class="fas fa-briefcase"></i>
+
+                            <span>Government Jobs</span>
+
+                            <small>Explore recruitment notices</small>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="Explain government welfare schemes in simple language.">
+
+                            <i class="fas fa-hand-holding-heart"></i>
+
+                            <span>Welfare Schemes</span>
+
+                            <small>Understand public benefits</small>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="How do I verify whether a government notification is genuine?">
+
+                            <i class="fas fa-file-circle-check"></i>
+
+                            <span>Verify Notifications</span>
+
+                            <small>Understand source verification</small>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INPUT AREA -->
+            <div class="chat-input-area">
+
+                <form id="chatForm" class="chat-form">
+
+                    <textarea
+                        id="chatInput"
+                        placeholder="Ask anything about Karnataka government notifications..."
+                        rows="1"
+                        required>
+                    </textarea>
+
+                    <button type="submit" id="sendBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+                <div class="input-footer">
+
+                    <span>
+                        <i class="fas fa-info-circle"></i>
+                        AI-generated responses may require verification.
+                    </span>
+
+                    <span>
+                        Karnataka AI Prototype
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="assistant.js"></script>
+
+</body>
+</html>
