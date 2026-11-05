@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karnataka AI | Government Information Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-landmark"></i>
+            </div>
+
+            <div class="brand-name">
+                <h2>ಕರ್ನಾಟಕ AI</h2>
+                <span>KARNATAKA INFORMATION PORTAL</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#categories">Explore</a>
+            <a href="#notifications">Notifications</a>
+            <a href="#assistant">AI Assistant</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <select id="languageSelect" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="kn">ಕನ್ನಡ</option>
+            </select>
+
+            <button class="login-btn" id="loginBtn">
+                <i class="fa-regular fa-user"></i>
+                Sign in
+            </button>
+
+        </div>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    <span class="status-dot"></span>
+                    YOUR GOVERNMENT INFORMATION ASSISTANT
+                </div>
+
+                <h1>
+                    Government information,
+                    <span>simplified.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover government scholarships, employment opportunities,
+                    schemes and notifications across Karnataka — all in one place.
+                </p>
+
+                <!-- SEARCH -->
+                <form class="search-container" id="searchForm">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search scholarships, jobs, schemes..."
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">Search</button>
+
+                </form>
+
+                <div class="popular-searches">
+                    <span>Popular:</span>
+                    <button type="button" class="search-suggestion"
+                            data-query="Scholarships">Scholarships</button>
+                    <button type="button" class="search-suggestion"
+                            data-query="Government jobs">Government jobs</button>
+                    <button type="button" class="search-suggestion"
+                            data-query="Notifications">Notifications</button>
+                </div>
+
+            </div>
+
+            <div class="hero-illustration">
+
+                <div class="illustration-card main-illustration">
+                    <div class="illustration-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3>One platform.</h3>
+                    <h3>Every opportunity.</h3>
+                    <p>Access Karnataka government information with ease.</p>
+
+                    <div class="illustration-bottom">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Source-backed information
+                    </div>
+                </div>
+
+                <div class="floating-card floating-top">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Scholarship updates
+                </div>
+
+                <div class="floating-card floating-bottom">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Job opportunities
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRUST STRIP -->
+        <section class="trust-strip">
+            <!-- ADVANCED SEARCH SECTION -->
+
+<section class="advanced-search-section" id="advancedSearch">
+
+    <div class="advanced-search-container">
+
+        <div class="advanced-search-heading">
+            <span class="section-label">SMART DISCOVERY</span>
+            <h2>Find exactly what you need.</h2>
+            <p>Refine your search using categories, departments and publication year.</p>
+        </div>
+
+        <form id="advancedSearchForm" class="advanced-search-form">
+
+            <div class="advanced-input">
+                <label for="advancedCategory">Category</label>
+
+                <select id="advancedCategory">
+                    <option value="All">All categories</option>
+                    <option value="Scholarships">Scholarships</option>
+                    <option value="Jobs">Government Jobs</option>
+                    <option value="Schemes">Government Schemes</option>
+                    <option value="Notifications">Notifications</option>
+                </select>
+            </div>
+
+            <div class="advanced-input">
+                <label for="departmentFilter">Department</label>
+
+                <select id="departmentFilter">
+                    <option value="All">All departments</option>
+                    <option value="Education">Education</option>
+                    <option value="Recruitment">Recruitment</option>
+                    <option value="Social Welfare">Social Welfare</option>
+                    <option value="General Administration">General Administration</option>
+                </select>
+            </div>
+
+            <div class="advanced-input">
+                <label for="yearFilter">Publication year</label>
+
+                <select id="yearFilter">
+                    <option value="All">All years</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+
+            <div class="advanced-input">
+                <label for="sortFilter">Sort results</label>
+
+                <select id="sortFilter">
+                    <option value="relevant">Most relevant</option>
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                    <option value="az">Title A–Z</option>
+                </select>
+            </div>
+
+            <button type="submit" class="advanced-search-btn">
+                <i class="fa-solid fa-sliders"></i>
+                Apply filters
+            </button>
+
+        </form>
+
+        <button type="button" id="resetAdvancedSearch"
+                class="reset-search-btn">
+            <i class="fa-solid fa-rotate-left"></i>
+            Reset filters
+        </button>
+
+    </div>
+
+</section>
+
+            <div>
+                <i class="fa-solid fa-file-circle-check"></i>
+                <span>Government source references</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <span>AI-powered search</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-language"></i>
+                <span>Multilingual accessibility</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-clock"></i>
+                <span>Easy-to-understand updates</span>
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORY SECTION -->
+        <section class="categories section-container" id="categories">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">EXPLORE INFORMATION</span>
+                    <h2>What are you looking for?</h2>
+                    <p>Explore government information by category.</p>
+                </div>
+            </div>
+
+            <div class="category-grid">
+
+                <button class="category-card" data-category="Scholarships">
+                    <div class="category-icon purple">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>Scholarships</h3>
+                    <p>Educational assistance and student opportunities.</p>
+                    <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+
+                <button class="category-card" data-category="Jobs">
+                    <div class="category-icon blue">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3>Government Jobs</h3>
+                    <p>Recruitment announcements and job notifications.</p>
+                    <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+
+                <button class="category-card" data-category="Schemes">
+                    <div class="category-icon green">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Government Schemes</h3>
+                    <p>Public welfare and government initiatives.</p>
+                    <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+
+                <button class="category-card" data-category="Notifications">
+                    <div class="category-icon orange">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <h3>Notifications</h3>
+                    <p>Important announcements and official updates.</p>
+                    <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOTIFICATIONS SECTION -->
+        <section class="notifications-section" id="notifications">
+
+            <div class="section-container">
+
+                <div class="notification-heading">
+
+                    <div>
+                        <span class="section-label">STAY INFORMED</span>
+                        <h2>Latest information</h2>
+                        <p>Browse government information in one place.</p>
+                    </div>
+
+                    <button class="view-all-btn" id="viewAllBtn">
+                        View all <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- FILTER BUTTONS -->
+                <div class="filter-container">
+
+                    <button class="filter-btn active"
+                            data-filter="All">All</button>
+
+                    <button class="filter-btn"
+                            data-filter="Scholarships">Scholarships</button>
+
+                    <button class="filter-btn"
+                            data-filter="Jobs">Jobs</button>
+
+                    <button class="filter-btn"
+                            data-filter="Schemes">Schemes</button>
+
+                    <button class="filter-btn"
+                            data-filter="Notifications">Notifications</button>
+
+                </div>
+
+
+                <!-- CARDS WILL BE GENERATED USING JAVASCRIPT -->
+                <div class="notification-grid" id="notificationGrid">
+                </div>
+
+                <p class="empty-message" id="emptyMessage" hidden>
+                    No matching information found.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI ASSISTANT SECTION -->
+        <section class="assistant-section" id="assistant">
+
+            <div class="assistant-container">
+
+                <div class="assistant-content">
+
+                    <span class="section-label">INTRODUCING AI ASSISTANCE</span>
+
+                    <h2>
+                        Don't just search.
+                        <span>Ask.</span>
+                    </h2>
+
+                    <p>
+                        Have questions about government schemes, scholarships
+                        or eligibility? Ask in simple language and get
+                        easy-to-understand answers backed by relevant
+                        government documents.
+                    </p>
+
+                    <div class="assistant-features">
+
+                        <div>
+                            <i class="fa-solid fa-check-circle"></i>
+                            Ask questions naturally
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-check-circle"></i>
+                            Understand lengthy documents
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-check-circle"></i>
+                            View supporting sources
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHAT INTERFACE -->
+                <div class="chat-box">
+
+                    <div class="chat-header">
+
+                        <div class="chat-avatar">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+
+                        <div>
+                            <h3>Karnataka AI Assistant</h3>
+                            <span><span class="status-dot"></span> Information assistant</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat-messages" id="chatMessages">
+
+                        <div class="bot-message">
+                            Hello! I'm your Karnataka Government
+                            Information Assistant. What would you like
+                            to know today?
+                        </div>
+
+                    </div>
+
+
+                    <div class="suggested-questions">
+
+                        <button type="button"
+                                data-question="What scholarships are available for students?">
+                            Scholarships for students
+                        </button>
+
+                        <button type="button"
+                                data-question="How can I find government job notifications?">
+                            Government job notifications
+                        </button>
+
+                    </div>
+
+
+                    <form class="chat-input-area" id="chatForm">
+
+                        <input
+                            type="text"
+                            id="chatInput"
+                            placeholder="Ask your question..."
+                            autocomplete="off"
+                        >
+
+                        <button type="submit" aria-label="Send message">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+
+                    </form>
+
+                    <p class="chat-disclaimer">
+                        Demo interface. AI responses will be connected to
+                        the backend in a later development phase.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <h2>ಕರ್ನಾಟಕ AI</h2>
+                    <p>
+                        Making Karnataka government information
+                        easier to discover and understand.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Explore</h4>
+                    <a href="#categories">Categories</a>
+                    <a href="#notifications">Notifications</a>
+                    <a href="#assistant">AI Assistant</a>
+                </div>
+
+                <div>
+                    <h4>Platform</h4>
+                    <a href="#home">About</a>
+                    <a href="#home">Contact</a>
+                    <a href="#home">Privacy</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Karnataka AI. Academic project prototype.</p>
+                <p>Information must always be verified against its original government source.</p>
+            </div>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
